@@ -1,0 +1,168 @@
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS (TEMA DARK)
+   ========================================= */
+   :root {
+    --bg-dark: #121212;
+    --card-bg: #1e1e1e;
+    --item-bg: #252525;
+    --border-color: #333;
+    --text-main: #ffffff;
+    --text-dim: #a0a0a0;
+    --blue-edit: #3b82f6;
+    --red-delete: #ef4444;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================================
+   2. CONTAINERS (CARDS)
+   ========================================= */
+.container, .container2 {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 850px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+h2 {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 15px 0 8px 0;
+}
+
+/* =========================================
+   3. LISTAS E ALINHAMENTO DOS BOTÕES
+   ========================================= */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: var(--item-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    
+    /* Flexbox para alinhar tudo em linha */
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+li:hover {
+    background-color: #2d2d2d;
+}
+
+/* Estilo para os botões dentro da lista */
+li button {
+    min-width: 100px; /* Largura idêntica para todos os botões */
+    height: 36px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s, filter 0.2s;
+    color: white;
+}
+
+/* O SEGREDO DO ALINHAMENTO: 
+   O primeiro botão (Editar) empurra tudo à esquerda para longe */
+li button:first-of-type {
+    margin-left: auto; 
+    background-color: var(--blue-edit);
+}
+
+/* O segundo botão (Deletar) apenas mantém distância do primeiro */
+li button:last-of-type {
+    margin-left: 12px;
+    background-color: var(--red-delete);
+}
+
+li button:hover {
+    filter: brightness(1.2);
+}
+
+li button:active {
+    transform: scale(0.95);
+}
+
+/* =========================================
+   4. FORMULÁRIOS (CADASTRO)
+   ========================================= */
+input[type="text"] {
+    width: 100%;
+    background-color: #2a2a2a;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 14px;
+    color: #fff;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--blue-edit);
+}
+
+/* Botões de Cadastrar/Atualizar */
+input[type="button"] {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+input[type="button"]:hover {
+    background-color: #444;
+}
+
+/* Botão de navegação superior */
+a button {
+    background-color: #1e1e1e;
+    color: var(--text-dim);
+    border: 1px solid var(--border-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* Remove os <br> visuais do HTML */
+br {
+    display: none;
+}
