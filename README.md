@@ -87,8 +87,8 @@ CREATE DATABASE LojaDB;
 ### 1️⃣ Clonar o repositório
 
 ```bash
-git clone URL_DO_REPOSITORIO
-```
+[git clone URL_DO_REPOSITORIO
+](https://github.com/pradogabrel/api_pedidos_loja.git)```
 
 ---
 
